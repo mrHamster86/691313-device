@@ -9,46 +9,48 @@
   	<header class="header">
   		<h1 class="hidden">Интернет магазин Device</h1>
   		<nav class="main-nav wrapper">
-	  		<a class="logo logo--header">Device</a>
-	  		<!-- форма поиска -->
-	  		<a class="catalog-link">Каталог товаров</a>
-	  		<div class="catalog-menu">
-		  		<ul class="catalog-menu__item catalog-menu__item--col1">
-		  			<li><a class="catalog-menu__link" href="#">Виртуальная реальность</a></li>
-		  			<li><a class="catalog-menu__link" href="#">Моноподы для селфи</a></li>
-		  			<li><a class="catalog-menu__link" href="#">Экшн-камеры</a></li>
-		  		</ul>
-		  		<ul class="catalog-menu__item catalog-menu__item--col2">
-		  			<li><a class="catalog-menu__link" href="#">Фитнес-браслеты</a></li>
-		  			<li><a class="catalog-menu__link" href="#">Умные часы</a></li>
-		  		</ul>
-		  		<ul class="catalog-menu__item catalog-menu__item--col3">
-		  			<li><a class="catalog-menu__link" href="#">Квадрокоптеры</a></li>
-		  		</ul>
-	  		</div>
-	  		<ul class="user-nav user-nav--header">
-	  			<li class="user-nav__login-link user-nav__login-link--header">Войти</li>
-	  		</ul>
-	  		<ul class="user-service user-service--header">
-	  			<li class="user-service__compare user-service__compare--header"><a href="#">Сравнить</a></li>
-	  			<li class="user-service__basket user-service__cart--header"><a href="#">Корзина</a></li>
-	  		</ul>
-	  		<ul class="site-service site-service--header">
+  			<a class="logo logo--header">Device</a>
+  			<!-- форма поиска -->
+	  		<ul class="site-service site-service--header">		  		
+		  		<li class="site-service__catalog-link">
+		  			<a href="#">Каталог товаров</a>
+		  			<div class="catalog-menu">
+				  		<ul class="catalog-menu__item catalog-menu__item--col1">
+				  			<li><a class="catalog-menu__link" href="#">Виртуальная реальность</a></li>
+				  			<li><a class="catalog-menu__link" href="#">Моноподы для селфи</a></li>
+				  			<li><a class="catalog-menu__link" href="#">Экшн-камеры</a></li>
+				  		</ul>
+				  		<ul class="catalog-menu__item catalog-menu__item--col2">
+				  			<li><a class="catalog-menu__link" href="#">Фитнес-браслеты</a></li>
+				  			<li><a class="catalog-menu__link" href="#">Умные часы</a></li>
+				  		</ul>
+				  		<ul class="catalog-menu__item catalog-menu__item--col3">
+				  			<li><a class="catalog-menu__link" href="#">Квадрокоптеры</a></li>
+				  		</ul>
+			  		</div>
+		  		</li>
 	  			<li class="site-service__delivery site-service__delivery--header"><a href="#">Доставка</a></li>
 	  			<li class="site-service__warranty site-service__warranty--header"><a href="#">Гарантия</a></li>
 	  			<li class="site-service__contacts site-service__contacts--header"><a href="#">Контакты</a></li>
 	  		</ul>
+	  		
+	  		<ul class="user-nav user-nav--header">
+	  			<li class="user-nav__login-link user-nav__login-link--header"><a href="#">Войти</a></li>
+	  			<li class="user-nav__compare user-nav__compare--header"><a href="#">Сравнить</a></li>
+	  			<li class="user-nav__basket user-nav__cart--header"><a href="#">Корзина</a></li>
+	  		</ul>
+	  		
 	  	</nav>
   	</header>
   	<main>
   		<section class="main-product-slider wrapper">
   			<div class="product-slide product-slide--active">
   				<img src="http://placehold.it/400x480" alt="Длинная палка для селфи" class="product-slide__img">
-  				<span class="product-slide__namber">01</span>
+  				<span class="product-slide__namber">01</span><!--Вопрос в расширяемости на движке тут будет переменная(номер слайда) а если это псевдо элемент в него можно вставлять переменную??? Да в CSS есть возможномть создвать переменные, а как считать номер??-->
   				<b class="product-slide__name">Делай селфи,<br>как Бен Стиллер!</b>
-  				<p class="product-slide__description">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+  				<p class="product-slide__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 				<a href="#" class="product-slide__link btn">Подробнее</a>
-				<table class="product-slide__characteristics"><!--Это новый блок?-->
+				<table class="ps-characteristics"><!--Это новый блок?-->
 					<tr>
 						<td class="ps-characteristics__value">8,5 м</td><!--Это нвый элемент?-->
 						<td class="ps-characteristics__value">5 кг</td>
@@ -65,9 +67,9 @@
   				<img src="http://placehold.it/400x480" alt="Фитнес-браслет" class="product-slide__img">
   				<span class="product-slide__namber">02</span>
   				<b class="product-slide__name">Худеем<br>правильно!</b>
-  				<p class="product-slide__description">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
+  				<p class="product-slide__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 				<a href="#" class="product-slide__link btn">Подробнее</a>
-				<table class="product-slide__characteristics">
+				<table class="ps-characteristics">
 					<tr>
 						<td class="ps-characteristics__value">48 часов</td>
 					</tr>
@@ -80,9 +82,9 @@
   				<img src="http://placehold.it/400x480" alt="Квадрокоптер с лазером" class="product-slide__img">
   				<span class="product-slide__namber">03</span>
   				<b class="product-slide__name">Порхает как бабочка,<br>жалит как пчела!</b>
-  				<p class="product-slide__description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
+  				<p class="product-slide__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 				<a href="#" class="product-slide__link btn">Подробнее</a>
-				<table class="product-slide__characteristics">
+				<table class="ps-characteristics">
 					<tr>
 						<td class="ps-characteristics__value">800 м</td>
 						<td class="ps-characteristics__value">50 м</td>
@@ -148,29 +150,27 @@
   			<h2 class="contacts__title">Контакты</h2>
   			<p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
   			<!--Maps-->
-  			<button type="button" class="contacts__btn btn">НАпишите нам</button>
+  			<a href="#" class="contacts__btn btn">НАпишите нам</a>
   		</section>
   	</main>
 	<footer class="footer">
 		<div class="wrapper">
   			<a class="logo logo--footer">Device</a>
   			<p class="footer-address">г. Москва, ул. Строителей, 15</p>
-	  		<ul class="user-nav user-nav--footer"><!--Смотри Header-->
-	  			<li class="user-nav__login-link user-nav__login-link--footer">Войти</li>
-	  		</ul>
-	  		<ul class="site-service site-service--footer">
+			<ul class="site-service site-service--footer">
 	  			<li class="site-service__delivery site-service__delivery--footer"><a href="#">Доставка</a></li>
 	  			<li class="site-service__warranty site-service__warranty--footer"><a href="#">Гарантия</a></li>
 	  			<li class="site-service__contacts site-service__contacts--footer"><a href="#">Контакты</a></li>
 	  		</ul>
-	  		<div class="social-icon">
-	  			<a class="social-icon__fb">Facebook</a>
-	  			<a class="social-icon__Insta">Instagram</a>
-	  			<a class="social-icon__tw">Twitter</a>
-	  		</div>
-	  		<ul class="user-service user-service--footer">
-	  			<li class="user-service__compare user-service__compare--footer"><a href="#">Сравнить</a></li>
-	  			<li class="user-service__basket user-service__basket--footer"><a href="#">Корзина</a></li>
+	  		<ul class="social-icon">
+	  			<li class="social-icon__item"><a class="social-icon__fb">Facebook</a></li>
+	  			<li class="social-icon__item"><a class="social-icon__Insta">Instagram</a></li>
+	  			<li class="social-icon__item"><a class="social-icon__tw">Twitter</a></li>
+	  		</ul>
+	  		<ul class="user-nav user-nav--footer"><!--Смотри Header-->
+	  			<li class="user-nav__login user-nav__login--footer"><a href="#">Войти</a></li>
+	  			<li class="user-nav__compare user-nav__compare--footer"><a href="#">Сравнить</a></li>
+	  			<li class="user-nav__basket user-nav__basket--footer"><a href="#">Корзина</a></li>
 	  		</ul>
 	  		<p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
 	  		<a class="footer-htmlacademy-link" href="https://htmlacademy.ru"><img width="26px" height="32px" src="http://placehold.it/26x32" alt="HTML Academy"></a>
