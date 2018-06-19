@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=cyrillic');
+@font-face{
+	font-family: Gilroy;
+	src: url(fonts/gilroylight.woff2);
+	font-weight: lighter;
+	font-style: normal;
+}
+@font-face{
+	font-family: Gilroy;
+	src: url(fonts/gilroyextrabold.woff2);
+	font-weight: bold;
+	font-style: normal;
+}
+/*--Цвета--*/
+@white:                   rgba(255, 255, 255, 1);
+@white--03:               rgba(255, 255, 255, 0.3);
+@white--06:               rgba(255, 255, 255, 0.6);
+@yellow:                  #f7e296;
+@yellow-dark:             #f0c52e;
+@gray-light:              #eeeeee;
+@gray:                    #e5e5e5;
+@gray-darken:             #464646;
+@black:                   rgba(0, 0, 0, 1);
+@black--03:               rgba(0, 0, 0, 0.3);
+@black--06:               rgba(0, 0, 0, 0.6);
+
+/*--Шрифт--*/
+@Gilroy:                  Gilroy, Arial, sans-serif;
+@Open-Sans:               Open Sans, Arial, sans-serif;
+
+/*--Размер Шрифта--*/
+@font-size:               15px;
+@font-size--h1:           47px;
+@font-size--big:          18px;
+@font-size--small:        14px;
+
+@line-height:             30px;
+@line-height--h1:         56px;
+@line-height--big:        24px;
+@line-height--small:      18px;
+
+
+
+html,
+body{
+    min-width: 1200px;
+	margin: 0;
+	padding: 0;
+	font-size: @font-size;
+    line-height: @line-height;
+	font-family: @Open-Sans;
+	font-weight: lighter;
+	background-color: @white;
+	color: @black;
+}
+a{
+	text-decoration-line: none;
+
+	&:focus{
+		outline: none;
+    }
+}
+img{
+	margin-top: 0;
+	padding: 0;
+}
+
+
+/*--Общие классы--*/
+.visible-hidden{
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+.wrapper{
+	margin: 0 20px;
+	width: 1160px;
+}
+.btn{
+	display: inline-block;
+	padding: 8px 25px;
+	color: @black;
+	font-size: @font-size--big;
+	line-height: @line-height;
+	font-family: @Gilroy;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: linear-gradient(to bottom,transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
+	border: none;
+
+    &:hover,
+    &:focus{
+    	background: @yellow-dark;
+    	outline: none;
+
+    &:active{
+    	color: rgba(0, 0, 0, 0.3);
+    	background: @yellow-dark;
+        }
+    }
+}
+/*--Header--*/
+.header{
+	padding-top: 40px;
+}
+.main-nav{
+	position: relative;
+	padding: 32px 60px 52px 60px;
+	background-color: @yellow;
+}
+.logo{
+	font-size: @font-size--h1;
+	line-height: 36px;
+	font-family: @Gilroy;
+	font-weight: bold;
+	text-transform: uppercase;
+
+    &--header{
+		position: absolute;
+		top: -18px;
+		color: @black;
+	}
+	&--footer{
+		color: @yellow-dark;
+	}
+}
+.user-nav{
+	display: flex;
+	align-items: baseline;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+    &__item{
+    	flex-shrink: 0;
+
+        &--serch{
+    		flex-basis: 540px;
+    	}
+	    &--login-link{}
+    	&--compare{
+    		margin-left: auto;
+    	}
+    	&--basket{}
+    	&--user{}
+    	&--unlogin-link{
+    		color: @black--03;
+    	}
+    }
+    &__link{
+
+        &--login-link{}
+        &--compare{}
+        &--basket{}
+    }
+}
+.site-serch{
+
+	&__label{
+    	color: @black--03;
+    	line-height: @line-height--big;
+
+    	&:hover{
+    		color: @black--06;
+    	}
+    }
+
+    &__input{
+    	width: 0;
+    	padding: 16px 0;
+    	padding-left: 40px;
+    	font-size: 15px;
+    	color: @black;
+    	background-color: transparent;
+    	border: none;
+
+        &::placeholder{
+    		color: @black;
+    	}
+    	&:focus{
+    		width:305px;
+    		outline: none;
+    		border-bottom: 2px solid @black;
+
+            & ~ .site-serch__label{
+        		display: none;
+        	}
+        	& ~ .site-serch__button{
+        		display: inline;
+        	}
+        }
+    }
+
+    &__button{
+    	display: none;
+    	margin-left: -4px;
+    	padding: 16px 19px;
+    	font-size: @font-size;
+    	background-color: transparent;
+    	border: 2px solid @black;
+
+        &:hover{
+    		color: @white;
+    		background-color: @black;
+    	}
+    	&:active{
+    		color: @white--03;
+    		background-color: @black;
+    		border: 2px solid @black;
+    	}
+    }
+}
